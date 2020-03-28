@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 import numpy as np
+from sklearn.preprocessing import LabelEncoder
 
 train_path = "./train.csv"
 test_path = "./test.csv"
@@ -22,7 +23,6 @@ clf.fit(inputs, labels)
 # import graphviz
 # from sklearn.tree import export_graphviz
 # from sklearn import tree
-# from sklearn.preprocessing import LabelEncoder
 # dot_data = tree.export_graphviz(clf, out_file=None)
 # graph = graphviz.Source(dot_data)
 # graph.render("graph")
