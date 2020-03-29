@@ -1,5 +1,7 @@
 # titanic
 
+``max_depth=3``の決定木を用いてタイタニック号の乗客が生存したかどうかの予測を行います。
+
 ![aaaaa](https://user-images.githubusercontent.com/45190789/77848231-5a5e9000-71fe-11ea-94d5-c037f9f48fc5.png)
 
 
