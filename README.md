@@ -9,9 +9,12 @@
 
 https://www.kaggle.com/c/titanic よりダウンロード
 
+```
 titanic/
+　├ main.py
 　├ train.csv
 　└ test.csv
+```
 
 ```
 trainset.shape:  (891, 12)
