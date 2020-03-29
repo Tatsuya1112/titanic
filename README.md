@@ -7,11 +7,11 @@ https://www.kaggle.com/c/titanic よりダウンロード
 ## shape
 
 ```
-train_data.shape:  (891, 12)
-test_data.shape:  (418, 11)
+trainset.shape:  (891, 12)
+testset.shape:  (418, 11)
 ```
 
-## train_data.info()
+## trainset.info()
 
 ```
 RangeIndex: 891 entries, 0 to 890
