@@ -30,3 +30,7 @@ Cabin          204 non-null object
 Embarked       889 non-null object
 dtypes: float64(2), int64(5), object(5)
 ```
+
+# train
+
+``"Age", "Fare", "Sex", "Embarked", "Pclass", "SibSp", "Parch"`` を説明変数とする決定木を作成した。``"Sex", "Embarked"``には文字列を数字にエンコードした。
