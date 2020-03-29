@@ -1,5 +1,3 @@
-# titanic
-
 ``max_depth=3``の決定木を用いてタイタニック号の乗客が生存したかどうかの予測を行います。
 
 ![aaaaa](https://user-images.githubusercontent.com/45190789/77848231-5a5e9000-71fe-11ea-94d5-c037f9f48fc5.png)
@@ -43,4 +41,12 @@ dtypes: float64(2), int64(5), object(5)
 
 # train
 
-``"Age", "Fare", "Sex", "Embarked", "Pclass", "SibSp", "Parch"`` を説明変数とする決定木を作成した。``"Sex", "Embarked"``は``LabelEncoder``を用いて文字列を数字
+``"Age", "Fare", "Sex", "Embarked", "Pclass", "SibSp", "Parch"`` を説明変数とする決定木を作成します
+
+``"Sex", "Embarked"``は``LabelEncoder``を用いて文字列を数字に変換します
+
+# result
+
+```
+accuracy: 0.77511
+```
