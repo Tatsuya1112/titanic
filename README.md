@@ -1,5 +1,8 @@
 # titanic
 
+[graph.pdf](https://github.com/Tatsuya1112/titanic/files/4398750/graph.pdf)
+
+
 # datasets
 
 https://www.kaggle.com/c/titanic よりダウンロード
