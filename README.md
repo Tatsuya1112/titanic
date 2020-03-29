@@ -3,7 +3,7 @@
 ![aaaaa](https://user-images.githubusercontent.com/45190789/77848231-5a5e9000-71fe-11ea-94d5-c037f9f48fc5.png)
 
 
-# datasets
+# Datasets
 
 https://www.kaggle.com/c/titanic よりダウンロード
 
@@ -39,13 +39,13 @@ Embarked       889 non-null object
 dtypes: float64(2), int64(5), object(5)
 ```
 
-# train
+# Train
 
 ``"Age", "Fare", "Sex", "Embarked", "Pclass", "SibSp", "Parch"`` を説明変数とする決定木を作成します
 
 ``"Sex", "Embarked"``は``LabelEncoder``を用いて文字列を数字に変換します
 
-# result
+# Result
 
 ```
 accuracy: 0.77511
