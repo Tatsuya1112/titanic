@@ -1,6 +1,6 @@
 # titanic
 
-[graph.pdf](https://github.com/Tatsuya1112/titanic/files/4398750/graph.pdf)
+![aaaaa](https://user-images.githubusercontent.com/45190789/77848231-5a5e9000-71fe-11ea-94d5-c037f9f48fc5.png)
 
 
 # datasets
