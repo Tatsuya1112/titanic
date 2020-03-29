@@ -3,40 +3,31 @@ from sklearn.tree import DecisionTreeClassifier
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
 
-train_path = "./train.csv"
-test_path = "./test.csv"
+trainset_path = "./train.csv"
+testset_path = "./test.csv"
+encoder = LabelEncoder()
 
 # train
-train = pd.read_csv(train_path)
-train = train.dropna(subset=["Age", "Fare", "Sex", "Embarked", "Pclass", "SibSp", "Parch"])
+trainset = pd.read_csv(trainset_path)
+trainset = trainset.dropna(subset=["Age", "Fare", "Sex", "Embarked", "Pclass", "SibSp", "Parch"])
+trainset["Sex"] = encoder.fit_transform(trainset["Sex"])
+trainset["Embarked"] = encoder.fit_transform(trainset["Embarked"])
 
-encoder = LabelEncoder()
-train["Sex"] = encoder.fit_transform(train["Sex"])
-train["Embarked"] = encoder.fit_transform(train["Embarked"])
-
-inputs = train.loc[:, ["Age", "Fare", "Sex", "Embarked", "Pclass", "SibSp", "Parch"]]
-labels = train.loc[:, ["Survived"]]
+inputs = trainset.loc[:, ["Age", "Fare", "Sex", "Embarked", "Pclass", "SibSp", "Parch"]]
+labels = trainset.loc[:, ["Survived"]]
 
 clf = DecisionTreeClassifier(max_depth=3)
 clf.fit(inputs, labels)
 
-# import graphviz
-# from sklearn.tree import export_graphviz
-# from sklearn import tree
-# dot_data = tree.export_graphviz(clf, out_file=None)
-# graph = graphviz.Source(dot_data)
-# graph.render("graph")
-
 # test
-test = pd.read_csv(test_path)
-test = test.fillna(train.median())
+testset = pd.read_csv(testset_path)
+testset = testset.fillna(train.median())
+testset["Sex"] = encoder.fit_transform(testset["Sex"])
+testset["Embarked"] = encoder.fit_transform(testset["Embarked"])
 
-encoder = LabelEncoder()
-test["Sex"] = encoder.fit_transform(test["Sex"])
-test["Embarked"] = encoder.fit_transform(test["Embarked"])
-
-inputs = test.loc[:, ["Age", "Fare", "Sex", "Embarked", "Pclass", "SibSp", "Parch"]]
-
+inputs = testset.loc[:, ["Age", "Fare", "Sex", "Embarked", "Pclass", "SibSp", "Parch"]]
 predicts = clf.predict(inputs)
-outputs = pd.DataFrame({"PassengerId":test["PassengerId"], "Survived":predicts})
+
+# submit
+outputs = pd.DataFrame({"PassengerId":testset["PassengerId"], "Survived":predicts})
 outputs.to_csv("submission.csv", index=False)
