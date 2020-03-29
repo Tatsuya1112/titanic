@@ -9,14 +9,16 @@
 
 https://www.kaggle.com/c/titanic よりダウンロード
 
-## shape
+titanic/
+　├ train.csv
+　└ test.csv
 
 ```
 trainset.shape:  (891, 12)
 testset.shape:  (418, 11)
 ```
 
-## trainset.info()
+### trainset.info()
 
 ```
 RangeIndex: 891 entries, 0 to 890
