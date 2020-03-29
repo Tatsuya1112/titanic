@@ -21,7 +21,7 @@ clf.fit(inputs, labels)
 
 # test
 testset = pd.read_csv(testset_path)
-testset = testset.fillna(train.median())
+testset = testset.fillna(trainset.median())
 testset["Sex"] = encoder.fit_transform(testset["Sex"])
 testset["Embarked"] = encoder.fit_transform(testset["Embarked"])
 
