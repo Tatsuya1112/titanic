@@ -4,12 +4,16 @@
 
 https://www.kaggle.com/c/titanic よりダウンロード
 
+## shape
+
 ```
 train_data.shape:  (891, 12)
 test_data.shape:  (418, 11)
+```
 
-train_data.info():
+## train_data.info()
 
+```
 RangeIndex: 891 entries, 0 to 890
 Data columns (total 12 columns):
 PassengerId    891 non-null int64
