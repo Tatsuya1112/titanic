@@ -41,7 +41,7 @@ dtypes: float64(2), int64(5), object(5)
 
 # Train
 
-``"Age", "Fare", "Sex", "Embarked", "Pclass", "SibSp", "Parch"`` を説明変数とする決定木を作成します
+``"Age", "Fare", "Sex", "Embarked", "Pclass", "SibSp", "Parch"`` を説明変数として``"Survived"``を予測する決定木を作成します
 
 ``"Sex", "Embarked"``は``LabelEncoder``を用いて文字列を数字に変換します
 
